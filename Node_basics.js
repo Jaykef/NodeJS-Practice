@@ -81,7 +81,7 @@ async function example() {
 }
 example();
 
-// 8. create a folder - mkdirSync()
+// 8. create a new folder - mkdirSync()
 const fs = require('fs');
 
 const folderName = '/Users/jaykef/test';
