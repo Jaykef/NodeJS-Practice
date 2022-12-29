@@ -13,10 +13,24 @@ fs.readFile('/Users/Jaykef/test.txt', 'utf8', (err, data) => {
 const fs = require('fs'); 
 
 try {
-  const data = fs.readFileSync('/Users/joe/test.txt', 'utf8');
+  const data = fs.readFileSync('/Users/Jaykef/test.txt', 'utf8');
   console.log(data);
 } catch (err) {
   console.error(err);
 }
+
+// read promised-based files - fsPromises.readFile()
+const fs = require('fs/promises');
+
+async function example() {
+  try {
+    const data = await fs.readFile('/Users/Jaykef/test.txt', { encoding: 'utf8' });
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+example();
+
 
 
