@@ -101,6 +101,17 @@ const folderPath = '/Users/jaykef';
 
 fs.readdirSync(folderPath);
 
+// 10. rename a folder
+const fs = require('fs');
+
+fs.rename('/Users/jay', '/Users/kef', err => {
+  if (err) {
+    console.error(err);
+  }
+  // done
+});
+
+
 
 
 
