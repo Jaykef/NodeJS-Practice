@@ -94,6 +94,13 @@ try {
   console.error(err);
 }
 
+// 9. read content of a file - readdirSync()
+const fs = require('fs');
+
+const folderPath = '/Users/jaykef';
+
+fs.readdirSync(folderPath);
+
 
 
 
