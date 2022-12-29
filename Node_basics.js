@@ -50,7 +50,7 @@ const fs = require('fs');
 const content = 'Some content!';
 
 try {
-  fs.writeFileSync('/Users/joe/test.txt', content);
+  fs.writeFileSync('/Users/jaykef/test.txt', content);
   // file written successfully
 } catch (err) {
   console.error(err);
@@ -67,6 +67,20 @@ fs.appendFile('file.log', content, err => {
   }
   // done!
 });
+
+// 7. append with promises - fsPromises.appendFile()
+const fs = require('fs/promises');
+
+async function example() {
+  try {
+    const content = 'Some content!';
+    await fs.appendFile('/Users/jaykef/test.txt', content);
+  } catch (err) {
+    console.log(err);
+  }
+}
+example();
+
 
 
 
