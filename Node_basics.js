@@ -1,4 +1,4 @@
-// Reading files using Nodejs - readFile()
+// 1. Reading files using Nodejs - readFile()
 const fs = require('fs');
 
 fs.readFile('/Users/Jaykef/test.txt', 'utf8', (err, data) => {
@@ -9,7 +9,7 @@ fs.readFile('/Users/Jaykef/test.txt', 'utf8', (err, data) => {
   console.log(data);
 });
 
-// alternatively - readFileSync()
+// 2. alternatively - readFileSync()
 const fs = require('fs'); 
 
 try {
@@ -19,7 +19,7 @@ try {
   console.error(err);
 }
 
-// read promised-based files - fsPromises.readFile()
+// 3. read promised-based files - fsPromises.readFile()
 const fs = require('fs/promises');
 
 async function example() {
@@ -32,7 +32,7 @@ async function example() {
 }
 example();
 
-// writing files - writeFile()
+// 4. writing files - writeFile()
 const fs = require('fs');
 
 const content = 'Some content!';
@@ -44,7 +44,7 @@ fs.writeFile('/Users/jaykef/test.txt', content, err => {
   // file written successfully
 });
 
-// writing files synchronously - writeFileSync()
+// 5. writing files synchronously - writeFileSync()
 const fs = require('fs');
 
 const content = 'Some content!';
@@ -55,6 +55,20 @@ try {
 } catch (err) {
   console.error(err);
 }
+
+// 6. appending content to a file - appendFile()
+const fs = require('fs');
+
+const content = 'Some content!';
+
+fs.appendFile('file.log', content, err => {
+  if (err) {
+    console.error(err);
+  }
+  // done!
+});
+
+
 
 
 
