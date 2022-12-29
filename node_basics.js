@@ -101,7 +101,7 @@ const folderPath = '/Users/jaykef';
 
 fs.readdirSync(folderPath);
 
-// 10. rename a folder
+// 10. rename a folder - rename()
 const fs = require('fs');
 
 fs.rename('/Users/jay', '/Users/kef', err => {
@@ -110,6 +110,18 @@ fs.rename('/Users/jay', '/Users/kef', err => {
   }
   // done
 });
+
+// 11. remove a folder - fs.rmdir()
+const fs = require('fs');
+
+fs.rmdir(dir, err => {
+  if (err) {
+    throw err;
+  }
+
+  console.log(`${dir} is deleted!`);
+});
+
 
 
 
